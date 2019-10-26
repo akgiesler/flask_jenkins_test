@@ -21,10 +21,14 @@ def count_hello(num_hello):
 
     message = ''
 
-    for x in range(0,hello_count):
+    for _ in range(0,hello_count):
         message += ('hello\n\n')
     
     return message
+
+def main():
+    app.run()
+
 
 if __name__ == "__main__":
     app.run()
