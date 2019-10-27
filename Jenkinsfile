@@ -4,7 +4,6 @@ pipeline {
     stage('build') {
       steps {
         bat "echo starting..."
-        dir("C:\\dev\\flask_jenkins_test")
         bat "echo %cd%"
         bat 'pip install -r requirements.txt'
       }
