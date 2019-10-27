@@ -1,5 +1,5 @@
 pipeline {
-  dir("${env.WORKSPACE}"){sh "pwd"}
+  dir("${env.WORKSPACE}"){sh "echo %cd%"}
   agent { docker { image 'python:3.7.2' } }
   stages {
     stage('build') {
