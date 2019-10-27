@@ -1,9 +1,9 @@
 pipeline {
-  dir("C:\\dev\\flask_jenkins_test"){sh "echo %cd%"}
   agent { docker { image 'python:3.7.2' } }
   stages {
     stage('build') {
       steps {
+          dir("C:\\dev\\flask_jenkins_test"){sh "echo %cd%"}
         sh 'pip install -r requirements.txt'
       }
     }
