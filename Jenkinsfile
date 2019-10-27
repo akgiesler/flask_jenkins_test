@@ -1,5 +1,5 @@
 pipeline {
-  dir("${env.WORKSPACE}"){sh "echo %cd%"}
+  dir("C:\\dev\\flask_jenkins_test"){sh "echo %cd%"}
   agent { docker { image 'python:3.7.2' } }
   stages {
     stage('build') {
