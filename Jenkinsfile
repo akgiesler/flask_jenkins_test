@@ -1,6 +1,6 @@
 pipeline {
-  sh "echo hello world"
   agent { docker { image 'python:3.7.2' } }
+  environment{ PATH = 'C:\\Program Files\\Docker Toolbox;C:\\Program Files\\Python38\\Scripts\\;C:\\Program Files\\Python38\\;C:\\WINDOWS\\system32\\;C:\\Program Files\\Git\\cmd'}
   stages {
     stage('build') {
       steps {
