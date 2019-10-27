@@ -3,7 +3,6 @@ pipeline {
   stages {
     stage('build') {
       steps {
-        dir("C:\\dev\\flask_jenkins_test")
         sh "echo starting..."
         sh "echo %cd%"
         sh 'pip install -r requirements.txt'
