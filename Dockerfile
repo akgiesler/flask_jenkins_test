@@ -11,6 +11,6 @@ RUN pip install -r requirements.txt
 # Bundle app source
 COPY . /usr/src/app
 
-EXPOSE 5000
+EXPOSE 5000/tcp
 ENTRYPOINT ["python"]
-CMD ["little_web_app.py"]
+CMD ["little_web_app/little_web_app.py"]
