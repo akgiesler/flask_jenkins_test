@@ -3,14 +3,15 @@ pipeline {
   stages {
     stage('build') {
       steps {
-        bat "echo starting..."
-        bat "echo %cd%"
-        bat 'pip install -r requirements.txt'
+        sh "echo starting..."
+        dir("C:\\dev\\flask_jenkins_test")
+        sh "echo %cd%"
+        sh 'pip install -r requirements.txt'
       }
     }
     stage('test') {
       steps {
-        bat 'python little_web_app/tests.py'
+        sh 'python little_web_app/tests.py'
       }   
     }
   }
